@@ -45,55 +45,59 @@ const Index = () => {
 
   const projects = [
     {
-      title: "AssetHub - Industrial Asset Management",
-      description: "Uma plataforma web para gerenciamento e automação de ativos industriais, desenvolvida em parceria com o centro de pesquisa da Petrobras (CENPES).",
-      techStack: ["TypeScript", "React.js", "Node.js", "Ant Design"],
-      image: "/placeholder.svg"
+      title: "AssetHub - Gestão de Ativos Industriais",
+      description: "Uma plataforma web para gerenciamento e automação de ativos industriais, desenvolvida em parceria com o centro de pesquisa da Petrobras (CENPES). Participo do desenvolvimento tanto do UX/UI quanto do front e back-end do projeto.",
+      techStack: ["TypeScript", "React.js", "Node.js", "Ant Design", "Figma", "Gitlab"],
+      liveUrl: "https://assethub.imd.ufrn.br/asset-manager/submodels",
+      image: "/assethub.svg"
     },
     {
-      title: "Hotel Esmeralda Website",
-      description: "Site institucional e sistema de reservas para o Hotel Esmeralda, com foco em design responsivo e experiência do usuário.",
-      techStack: ["WordPress", "Elementor Pro", "HTML5", "CSS", "JavaScript"],
-      liveUrl: "#",
-      image: "/placeholder.svg"
+      title: "Sistema Informatizado de Gestão de Laboratórios",
+      description: "o SILab foi desenvolvido como uma solução do problema de gestão de laboratórios do campus do IFRN-ZN, proporcionando recursos de registro, controle e planejamento das atividades.",
+      techStack: ["Bootstrap", "Sass", "HTML5", "CSS", "JavaScript"],
+      liveUrl: "https://github.com/biancabp/SiLab",
+      image: "/silab.svg"
     },
     {
-      title: "Web Escolar Platform",
-      description: "Sistema de publicação de artigos e plataforma educacional desenvolvida para professores e alunos do IFRN.",
-      techStack: ["HTML", "CSS", "Bootstrap", "JavaScript", "WordPress"],
-      image: "/placeholder.svg"
+      title: "Programa de Remoção de Dados Espúrios",
+      description: "Esse sistema, desenvolvido em JavaScript, busca estimar a vazão de um fluido que passa por uma placa de orifício de uma refinaria de petróleo da Petrobras.",
+      techStack: ["HTML", "CSS", "Bootstrap", "JavaScript"],
+      liveUrl: "https://github.com/biancabp/desafio-petrobras",
+      image: "/sistema.png"
     }
   ];
 
   return (
     <div className="min-h-screen">
       <Navigation />
-      
-      {/* Hero Section */}
+
       <section id="home" className="min-h-screen hero-gradient flex items-center section-padding">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 fade-up opacity-0 translate-y-10 transition-all duration-700">
               <div className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary">
-                Full Stack Developer
+                Desenvolvedora Front-End
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-secondary">
                 Bianca Bezerra Pires
               </h1>
               <p className="text-lg text-gray-600 max-w-xl">
-                Developing modern web applications with passion for clean code and user experience. 
-                Currently working on industrial asset management systems at IMD/UFRN.
+              Olá, me chamo Bianca, tenho 19 anos, sou formada em <strong>Informática para Internet pelo IFRN </strong> e estou no 3° período de <strong>Tecnologia da Informação na UFRN</strong>
+                No IFRN tive muitas experiências com a área e foi o que me despertou o interesse em desenvolvimento web.<br></br>
               </p>
+              <p className="text-lg text-gray-600 max-w-xl">Atualmente, participo de um projeto de Gestão de Ativos Industriais 
+              em colaboração com o <strong>Centro de Pesquisa da Petrobras no IMD-UFRN</strong>.</p>
+             
               <div className="flex gap-4">
-                <a href="#contact" className="button-primary">
-                  Contact Me
+                <a href="tel:+5584996383482" className="button-primary">
+                  Meu contato
                 </a>
                 <a href="#projects" className="button-secondary">
-                  View Projects
+                 Projetos
                 </a>
               </div>
               <div className="flex gap-6 pt-4">
-                <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
+                <a href="https://github.com/biancabp" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
                   <Github size={24} />
                 </a>
                 <a href="https://www.linkedin.com/in/bianca-bezerra-pires/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
@@ -108,7 +112,7 @@ const Index = () => {
               </div>
             </div>
             <div className="flex justify-center items-center fade-up opacity-0 translate-y-10 transition-all duration-700 delay-200">
-              <div className="w-80 h-80 rounded-full overflow-hidden">
+              <div className="w-80 h-83 rounded-full overflow-hidden">
                 <img 
                   src="/lovable-uploads/ba020250-0f4c-4c1d-ab7f-178a179fb3c9.png"
                   alt="Profile"
@@ -120,35 +124,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="section-padding bg-white">
-        <div className="container mx-auto">
-          <div className="max-w-3xl mx-auto text-center mb-16 fade-up opacity-0 translate-y-10 transition-all duration-700">
-            <div className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary mb-4">
-              About Me
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">
-              Passionate About Web Development
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              Currently pursuing a Bachelor's degree in Information Technology at UFRN, 
-              I've been working with web development since 2022. My expertise spans across 
-              Node.js, React.js, TypeScript, and various modern web technologies. I'm particularly 
-              interested in creating scalable and maintainable applications with great user experiences.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
       <section id="skills" className="section-padding bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-16 fade-up opacity-0 translate-y-10 transition-all duration-700">
             <div className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary mb-4">
-              Skills & Technologies
+              Habilidades & Technologias
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-12">
-              Technical Expertise
+              Conhecimento Técnico
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {skills.map((skill, index) => (
@@ -174,15 +157,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
       <section id="projects" className="section-padding bg-accent">
         <div className="container mx-auto">
           <div className="text-center mb-16 fade-up opacity-0 translate-y-10 transition-all duration-700">
             <div className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary mb-4">
-              Featured Projects
+              Projetos
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8">
-              Recent Work
+            Trabalhos recentes
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (

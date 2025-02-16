@@ -1,7 +1,20 @@
 import { useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import ProjectCard from '@/components/ProjectCard';
-import { Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { 
+  Github, 
+  Linkedin, 
+  Mail, 
+  Phone, 
+  FileJson, 
+  Code2, 
+  Compass, 
+  Coffee,
+  Palette,
+  Layout,
+  FileCode2,
+  Database
+} from 'lucide-react';
 
 const Index = () => {
   useEffect(() => {
@@ -18,6 +31,17 @@ const Index = () => {
     elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
+
+  const skills = [
+    { name: "TypeScript", icon: FileJson, color: "#2F74C0" },
+    { name: "React.js", icon: Code2, color: "#61DAFB" },
+    { name: "Node.js", icon: FileCode2, color: "#539E43" },
+    { name: "Java", icon: Coffee, color: "#E76F00" },
+    { name: "HTML5", icon: Layout, color: "#E34F26" },
+    { name: "CSS3", icon: Palette, color: "#264DE4" },
+    { name: "JavaScript", icon: Compass, color: "#F7DF1E" },
+    { name: "WordPress", icon: Database, color: "#21759B" }
+  ];
 
   const projects = [
     {
@@ -112,6 +136,40 @@ const Index = () => {
               Node.js, React.js, TypeScript, and various modern web technologies. I'm particularly 
               interested in creating scalable and maintainable applications with great user experiences.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="section-padding bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-16 fade-up opacity-0 translate-y-10 transition-all duration-700">
+            <div className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary mb-4">
+              Skills & Technologies
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-12">
+              Technical Expertise
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {skills.map((skill, index) => (
+                <div 
+                  key={skill.name}
+                  className="fade-up opacity-0 translate-y-10 transition-all duration-700"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="flex flex-col items-center gap-4 p-6 rounded-xl bg-accent hover:bg-accent/60 transition-colors">
+                    <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-white shadow-sm">
+                      <skill.icon 
+                        size={32} 
+                        style={{ color: skill.color }}
+                        className="transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </div>
+                    <span className="font-medium text-secondary">{skill.name}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

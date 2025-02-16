@@ -1,7 +1,7 @@
-
 import { useEffect } from 'react';
 import Navigation from '@/components/Navigation';
-import { Github, Linkedin, Mail, Phone, ExternalLink, ArrowRight } from 'lucide-react';
+import ProjectCard from '@/components/ProjectCard';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 const Index = () => {
   useEffect(() => {
@@ -19,6 +19,28 @@ const Index = () => {
     return () => observer.disconnect();
   }, []);
 
+  const projects = [
+    {
+      title: "AssetHub - Industrial Asset Management",
+      description: "Uma plataforma web para gerenciamento e automação de ativos industriais, desenvolvida em parceria com o centro de pesquisa da Petrobras (CENPES).",
+      techStack: ["TypeScript", "React.js", "Node.js", "Ant Design"],
+      image: "/placeholder.svg"
+    },
+    {
+      title: "Hotel Esmeralda Website",
+      description: "Site institucional e sistema de reservas para o Hotel Esmeralda, com foco em design responsivo e experiência do usuário.",
+      techStack: ["WordPress", "Elementor Pro", "HTML5", "CSS", "JavaScript"],
+      liveUrl: "#",
+      image: "/placeholder.svg"
+    },
+    {
+      title: "Web Escolar Platform",
+      description: "Sistema de publicação de artigos e plataforma educacional desenvolvida para professores e alunos do IFRN.",
+      techStack: ["HTML", "CSS", "Bootstrap", "JavaScript", "WordPress"],
+      image: "/placeholder.svg"
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -28,7 +50,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 fade-up opacity-0 translate-y-10 transition-all duration-700">
-              <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary">
+              <div className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary">
                 Full Stack Developer
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-secondary">
@@ -61,15 +83,14 @@ const Index = () => {
                 </a>
               </div>
             </div>
-            <div className="relative fade-up opacity-0 translate-y-10 transition-all duration-700 delay-200">
-              <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
+            <div className="flex justify-center items-center fade-up opacity-0 translate-y-10 transition-all duration-700 delay-200">
+              <div className="w-64 h-64 rounded-full overflow-hidden">
                 <img 
                   src="/lovable-uploads/ba020250-0f4c-4c1d-ab7f-178a179fb3c9.png"
                   alt="Profile"
                   className="object-cover w-full h-full"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 -z-10 w-full aspect-square rounded-2xl bg-secondary opacity-10"></div>
             </div>
           </div>
         </div>
@@ -95,16 +116,23 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Projects Section - Will be expanded in next iterations */}
+      {/* Projects Section */}
       <section id="projects" className="section-padding bg-accent">
         <div className="container mx-auto">
           <div className="text-center mb-16 fade-up opacity-0 translate-y-10 transition-all duration-700">
-            <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary mb-4">
+            <div className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary mb-4">
               Featured Projects
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8">
               Recent Work
             </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projects.map((project, index) => (
+                <div key={index} className="fade-up opacity-0 translate-y-10 transition-all duration-700" style={{ animationDelay: `${index * 200}ms` }}>
+                  <ProjectCard {...project} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

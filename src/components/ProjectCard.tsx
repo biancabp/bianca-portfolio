@@ -19,7 +19,7 @@ const ProjectCard = ({
   image,
 }: ProjectCardProps) => {
   return (
-    <div className="glassmorphism p-6 transition-all duration-300 hover:shadow-xl group">
+    <div className="bg-white rounded-xl p-6 transition-all duration-300 hover:shadow-lg border border-gray-100">
       {image && (
         <div className="relative w-full aspect-video rounded-lg overflow-hidden mb-6">
           <img
@@ -30,12 +30,12 @@ const ProjectCard = ({
         </div>
       )}
       <h3 className="text-xl font-bold text-secondary mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
+      <p className="text-gray-600 mb-4 text-sm">{description}</p>
       <div className="flex flex-wrap gap-2 mb-6">
         {techStack.map((tech) => (
           <span
             key={tech}
-            className="px-3 py-1 text-sm rounded-full bg-accent text-secondary"
+            className="px-3 py-1 text-xs font-medium rounded-full bg-secondary/5 text-secondary"
           >
             {tech}
           </span>

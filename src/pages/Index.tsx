@@ -82,8 +82,7 @@ const Index = () => {
                 Bianca Bezerra Pires
               </h1>
               <p className="text-lg text-gray-600 max-w-xl">
-              Olá, me chamo Bianca, tenho 19 anos, sou formada em <strong>Informática para Internet pelo IFRN </strong> e estou no 3° período de <strong>Tecnologia da Informação na UFRN</strong>
-                No IFRN tive muitas experiências com a área e foi o que me despertou o interesse em desenvolvimento web.<br></br>
+              Olá, me chamo Bianca, tenho 19 anos, sou formada em <strong>Informática para Internet pelo IFRN </strong> e estou no 3° período de <strong>Tecnologia da Informação na UFRN</strong>. No IFRN tive muitas experiências com a área e foi o que me despertou o interesse em desenvolvimento web.<br></br>
               </p>
               <p className="text-lg text-gray-600 max-w-xl">Atualmente, participo de um projeto de Gestão de Ativos Industriais 
               em colaboração com o <strong>Centro de Pesquisa da Petrobras no IMD-UFRN</strong>.</p>
